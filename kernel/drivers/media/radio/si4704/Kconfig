@@ -1,0 +1,24 @@
+config I2C_SI4704
+	bool "Silicon Labs Si4704 FM Radio Receiver support with I2C"
+	depends on I2C && RADIO_SI4704
+	---help---
+	  This is a driver for I2C devices with the Silicon Labs SI4704
+	  chip.
+
+	  Say Y here if you want to connect this type of radio to your
+	  computer's I2C port.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called radio-i2c-si4704.
+
+config I2C_SI4704_TESMODE
+	bool "Silicon Labs Si4704 FM Radio Receiver Full Mode"
+	depends on I2C && RADIO_SI4704 && I2C_SI4704
+	---help---
+	  This is a test mode for I2C devices with the Silicon Labs SI4704
+	  chip.
+
+	  Say Y here if you want to enable the full channel
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called radio-i2c-si4704.
